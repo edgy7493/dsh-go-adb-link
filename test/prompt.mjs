@@ -1,5 +1,6 @@
 // Checks the proactive-use prompt section: it must be registered with the
 // systemPrompt service and say the right thing for connected / disconnected.
+import './hooks.mjs'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
