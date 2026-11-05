@@ -1,6 +1,6 @@
 {
   "name": "dsh-go-adb-link",
-  "version": "0.1.0",
+  "version": "1.2.3",
   "title": {
     "zh": "ADB 自动连接",
     "en": "ADB auto-link"
