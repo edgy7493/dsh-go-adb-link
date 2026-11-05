@@ -59,20 +59,6 @@ dsh plugin --profile web remove dsh-go-adb-link
 
 也可以直接在 App 的插件详情里卸载。
 
-## 开发与发布
-
-```sh
-node "$DSH_HOME/skills/dsh-go-plugin/kit/bin/check.mjs" "$PWD" --load   # 清单/视图/加载自查
-node test/integration.mjs                                               # 真机联调（会真的连一次 adb）
-npm publish 会自动跑 scripts/prepublish.mjs，检查占位、许可与元数据
-```
-
-发布到 DSH Go 官方市场：把 `market-entry.json` 复制成
-[`ccch1mneyyy/dsh-go-market`](https://github.com/ccch1mneyyy/dsh-go-market) 里的
-`plugins/dsh-go-adb-link.json`，提 PR；npm 上必须是已发布的精确版本。
-
-发布前请把 `package.json` 和 `market-entry.json` 里的 `OWNER` 换成自己的 GitHub 用户名。
-
 ## License
 
 MIT
