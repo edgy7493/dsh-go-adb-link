@@ -6,8 +6,8 @@
     "en": "ADB auto-link"
   },
   "summary": {
-    "zh": "自动找到手机上的 ADB TCP 端口并保持连接，之后 bash 里直接可用 adb",
-    "en": "Finds the phone's ADB TCP port and keeps adb connected for bash sessions"
+    "zh": "安装前需在手机端开启经典 TCP ADB（Stellar/Shizuku TCP 或 adb tcpip）；插件自动查找端口并保持连接，并让 AI 主动执行系统级 adb 命令（开启自动批准时可能不经再次确认）。",
+    "en": "Requires classic TCP ADB enabled on the phone (Stellar/Shizuku TCP or adb tcpip) before installing. Finds the ADB port and keeps it connected, and lets the AI run system-level adb commands proactively, which may run without another prompt when auto-approval is on."
   },
   "category": "tools",
   "screenshots": [],
