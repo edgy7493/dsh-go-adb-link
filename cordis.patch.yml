@@ -1,0 +1,4 @@
+# id: any unique id; name: must equal "name" in package.json.
+- insert:
+    - id: dsh-go-adb-link
+      name: dsh-go-adb-link

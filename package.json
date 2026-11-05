@@ -1,0 +1,83 @@
+{
+  "name": "dsh-go-adb-link",
+  "version": "0.1.0",
+  "description": "DSH Go 原生插件：自动找到手机上的 ADB TCP 端口并保持连接 · Native dsh-go plugin: finds the phone's ADB TCP port and keeps adb connected",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "edgy7493",
+  "homepage": "https://github.com/edgy7493/dsh-go-adb-link#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgy7493/dsh-go-adb-link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edgy7493/dsh-go-adb-link/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-go",
+    "deepseek-harness",
+    "adb",
+    "shizuku",
+    "stellar"
+  ],
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "prepublishOnly": "node scripts/prepublish.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0",
+    "node": ">=22"
+  },
+  "dshGo": {
+    "v": 1,
+    "minApp": "1.0.11",
+    "title": {
+      "zh": "ADB 自动连接",
+      "en": "ADB auto-link"
+    },
+    "icon": "terminal",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "adb-state",
+          "icon": "terminal",
+          "text": {
+            "zh": "ADB 未连接",
+            "en": "ADB offline"
+          },
+          "panel": "adb"
+        }
+      ],
+      "panels": [
+        {
+          "id": "adb",
+          "title": {
+            "zh": "ADB 连接",
+            "en": "ADB link"
+          },
+          "icon": "terminal",
+          "placement": [
+            "session.tab",
+            "features",
+            "chat.panel"
+          ]
+        }
+      ]
+    }
+  }
+}
