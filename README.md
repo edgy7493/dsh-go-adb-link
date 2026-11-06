@@ -15,18 +15,27 @@ DSH Go 原生插件：自动找到手机上的 ADB TCP 端口（Stellar/Shizuku 
 
 ## 安装
 
-- **市场**：DSH Go `设置 › 插件 › 插件市场` 搜索「ADB 自动连接」，安装到本机
-- **npm**（在手机上本机环境执行）：
+市场已提交收录（PR 审核中），收录前可以先用下面的方式，效果一样：
 
-  ```sh
-  dsh plugin --profile web add dsh-go-adb-link
-  ```
+1. **npm 安装**（推荐；国内镜像已同步）
 
-- **本地目录**（开发）：
+   ```sh
+   dsh plugin --profile web add dsh-go-adb-link
+   ```
 
-  ```sh
-  dsh plugin --profile web add "$DSH_HOME/dsh-go/plugins/dsh-go-adb-link"
-  ```
+   提示找不到版本时，加官方源：`dsh plugin --profile web add dsh-go-adb-link --registry=https://registry.npmjs.org/`
+
+2. **GitHub 直接装**
+
+   ```sh
+   dsh plugin --profile web add github:edgy7493/dsh-go-adb-link
+   ```
+
+3. **离线 tarball**：从 [Releases](https://github.com/edgy7493/dsh-go-adb-link/releases) 下载
+   `dsh-go-adb-link-1.2.4.tgz` 放到手机，然后
+   `dsh plugin --profile web add /sdcard/Download/dsh-go-adb-link-1.2.4.tgz`
+
+装完到 App 的「引擎」页重启一次引擎，输入框上方的状态条就会出现。
 
 装完状态条立即出现在输入框上方；`lib/` 代码改动需要到 App 的「引擎」页重启引擎。
 
